@@ -1,0 +1,53 @@
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: border-box;
+
+
+}
+
+body {
+    font-family :Arial, Helvetica, sans-serif;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+}
+
+
+nav h2 {
+  color: white;
+}
+
+nav div {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
