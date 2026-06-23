@@ -1,10 +1,27 @@
-import Navbar from "../components/Navbar";
-const contact_us = () => {
-    return (
-    <>
-    <Navbar />
-    <h1>contact_us</h1>
-    </>);
-}
+const Contact = () => {
+  return (
+    <div className="contact">
+      <h1>Contact Us</h1>
 
-export default contact_us;
+      <form>
+        <input
+          type="text"
+          placeholder="Name"
+        />
+
+        <input
+          type="email"
+          placeholder="Email"
+        />
+
+        <textarea
+          placeholder="Message"
+        ></textarea>
+
+        <button>Submit</button>
+      </form>
+    </div>
+  );
+};
+
+export default Contact;
