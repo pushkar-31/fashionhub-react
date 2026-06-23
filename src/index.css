@@ -191,3 +191,46 @@ textarea {
 .category-buttons button:hover {
   background-color: #333;
 }
+
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.product-details {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.product-details img {
+  width: 400px;
+}
+@media (max-width: 768px) {
+  .products-container {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .product-details {
+    flex-direction: column;
+  }
+}
+
+.nav-links a {
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: gold;
+}

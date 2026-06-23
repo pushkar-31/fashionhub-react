@@ -26,7 +26,7 @@ const Cart = () => {
       <h1>Your Cart</h1>
 
       {cartItems.length === 0 ? (
-        <h2>Cart is Empty</h2>
+        <><h2>Cart is Empty</h2><p>Start shopping...</p></>
       ) : (
         <>
           {cartItems.map((item) => (
@@ -112,6 +112,15 @@ const Cart = () => {
               </div>
             </div>
           ))}
+
+          
+          <h3>
+  Total Items:{" "}
+  {cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  )}
+</h3>
 
           <h2>
             Grand Total: ₹
