@@ -1,8 +1,13 @@
 import { useParams } from "react-router-dom";
 import products from "../data/products";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  
+  const { addToCart } =
+  useContext(CartContext);
 
   const product = products.find(
     (item) => item.id === Number(id)
@@ -24,7 +29,8 @@ const ProductDetails = () => {
       <h2>₹{product.price}</h2>
       <p>{product.description}</p>
 
-      <button>Add To Cart</button>
+      <button  onClick={() => addToCart(product)}
+        >Add To Cart</button>
     </div>
   );
 };

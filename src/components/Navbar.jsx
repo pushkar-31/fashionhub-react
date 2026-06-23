@@ -1,6 +1,15 @@
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
+  const { cartItems } = useContext(CartContext);
+
+  const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   return (
     <nav className="navbar">
       <NavLink to="/" className="logo">
@@ -41,7 +50,7 @@ const Navbar = () => {
             isActive ? "active" : ""
           }
         >
-          🛒 Cart
+          🛒 Cart ({totalItems})
         </NavLink>
       </div>
     </nav>
